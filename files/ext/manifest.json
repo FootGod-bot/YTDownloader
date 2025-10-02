@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Send to yt-dlp Button",
+  "version": "1.0",
+  "description": "Adds a button on YouTube to send URL to yt-dlp.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
